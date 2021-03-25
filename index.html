@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Styling forms with CSS and making search bar accesible">
+    <title>Styling Forms</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <header>
+        <!-- <h1><img src="img/logo.jpg" alt="Company Logo"></h1> -->
+        <h1 class="sr-only">Company Name</h1>
+        <img src="img/logo.jpg" alt="COmpany Logo">
+        <button>Menu</button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Articles</a></li>
+                <li><a href="#">Guides</a></li>
+                <li><a href="#">Books</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Memberships</a></li>
+            </ul>
+        </nav>
+        <form action="#" method="GET" role="search">
+            <label class="sr-only" for="search">Search Bar</label>
+            <input type="text" id="search" for="search">
+        </form>
+    </header>
+
+    <section>
+        <h2>log In</h2>
+        <form action="#" method="POST">
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" autofocus required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <p>Password must contain a uppercase letter, a lowercase letter, a number, a special character and be at least 8 characters long in length</p>
+            <input type="password" id="password" autocomplete="off" pattern="^(?!.*([-]{2}))[a-zA-z0-9-$_]*$ on" required>
+        </div>
+        <div>
+            <input type="submit" value="sign in">
+        </div>
+        </form>
+    </section>
+
+
+</body>
+</html>
